@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Open cosole to see the results:</h2>
+    
+     <script>
+        let a=3;
+        let b=8;
+        console.log("a:",a);
+        console.log("b:",b);
+        function addition(a,b){
+            return a+b;
+            
+        }
+        add=addition(3,8);
+        
+        console.log("addition:",add);
+
+        function multiply(a,b){
+            return a*b;
+
+        }
+        multiple=multiply(3,8);
+        console.log("multiplication:",multiple);
+
+//arrow function:
+        
+
+        const sub=(a,b)=>{return a-b};
+        console.log("subract using arrow funct:",sub(3,8));
+
+
+//function with parameters:        
+
+        function  sayHello(name){
+            return "Hello"+name;
+
+        }
+        let greeting=sayHello("John");
+        console.log(greeting);
+
+
+//demonstrate global vs local scope:        
+
+
+        var foodcatering="madhampatti rangaraj";
+    console.log(foodcatering);
+
+    function reception(){
+        console.log(foodcatering + "CheckGlobal value"); //checks the global value
+    }
+    reception();// call the func reception
+
+
+    function wedding(){
+        var music=" DJ black";
+        console.log(music);
+
+    }
+    //console.log(music); // this variable defined inside funct so its not print
+    wedding();
+
+
+    {
+        var colour="red";
+        let colorcode="r47325";
+        console.log(colour);
+        console.log(colorcode);
+
+
+        
+    }
+    console.log(colour);// it is (var) called outside
+    
+
+
+//callback function:
+
+
+    function greet(name){
+        console.log('Hello,${name!}');
+
+    }
+    function processUser(callback){
+        const name="Alice";
+        callback(name);
+    }
+    processUser(greet);
+
+
+
+//closure Function:
+     
+ 
+    function outer() {
+        let outerVar = "I'm in the outer scope!";
+        function inner() {
+            console.log(outerVar);
+            outerVar = "Updated";
+        }
+        return inner;
+    }
+
+const closureFn = outer();
+closureFn(); // I'm in the outer scope!
+closureFn(); // Updated
+        
+
+
+     </script>
+</body>
+</html>
