@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+    <style>
+        #arrresult{
+            border-style: dotted;
+            border-color: blue;
+            background-color: rgb(189, 189, 216);
+            padding: 20px;
+        }
+        #arraydisplay{
+            padding: 25px;
+            background-color: rgb(228, 168, 140);
+            border-radius: 5px;
+            border-color: brown;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div id="arrresult"></div>
+    <h1 id="arraydisplay">ARRAY:</h1>
+    <div class="btncls">
+    <button onclick="pusharray()">Array push()</button> <br>
+    <button onclick="poparray()">Array pop()</button> <br>
+    <button onclick="shiftarray()">Array shift()</button> <br>
+    <button onclick="unshiftarray()">Array unshift()</button> <br>
+    <button onclick="printarray()">print all array</button><br>
+    </div>
+
+    
+
+    <script>
+        let cars=["hondai","swift","audi","bmw"]
+
+        function resultdisplay() { 
+            document.getElementById("arraydisplay").innerText = cars.join(" - "); 
+        }    
+        function pusharray() { 
+            cars.push("maruthi"); 
+            document.getElementById("arrresult").innerText = "push(): Added 'maruthi'"; 
+            resultdisplay(); 
+        }
+        function poparray() { 
+            let removed = cars.pop(); 
+            document.getElementById("arrresult").innerText = "pop(): Removed " + removed; 
+            resultdisplay();
+        } 
+     
+        function shiftarray() { 
+            let removed = cars.shift(); 
+            document.getElementById("arrresult").innerText = "shift(): Removed " + removed; 
+            resultdisplay(); 
+        } 
+ 
+   
+        function unshiftarray() { 
+            cars.unshift("ferrari"); 
+            document.getElementById("arrresult").innerText = "unshift(): Added 'ferrari'"; 
+            resultdisplay(); 
+        } 
+
+        function printarray(){
+            for(i=0;i<cars.length;i++){
+                document.getElementById("arrresult").innerText=cars;
+                resultdisplay();
+            }
+        }
+    resultdisplay();
+    </script>
+</body>
+</html>
