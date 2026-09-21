@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        
+<body>
+    <h1 id="demo">output</h1>
+    <p id="output"></p>
+    <button onclick="sayHello">sayHello()</button>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName : "Doe",
+            age      :  50
+        };
+        function sayHello(){
+            document.getElementById("output").innerText ="hello "+person.firstName; 
+        }
+
+        sayHello()
+        
+
+        console.log(person.firstName);
+        console.log(person.age);
+
+        person.firstName = "David";
+        person.age = 30;
+
+        console.log(person.firstName);
+        console.log(person.age);
+
+        
+
+        
+    </script>
+
+
+    
+</body>
+</html>
